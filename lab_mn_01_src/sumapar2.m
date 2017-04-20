@@ -1,0 +1,7 @@
+function [ s ] = sumapar2()
+	n = input("Introduceti n:");
+	s = 0;
+	for x = [0 : 2 : n] 
+		s = s + x;
+	endfor
+endfunction

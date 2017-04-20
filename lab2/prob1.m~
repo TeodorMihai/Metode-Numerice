@@ -1,0 +1,17 @@
+#C = [4 0 0 0 ; 0 0 2 0 ; 0 1 2 0; 1 0 0 1]
+
+function [A] = prob1(B)
+	
+#	disp(det(B))
+	if(rows(B) == 1)
+		A = 1/B;
+
+	for i = [1 : rows(B)]
+		if (det(B([1:i], [1:i])) && det(B([i + 1: rows(B)], [i + 1: columns(B)]) ) )
+			disp(det(det(B([1:i], [1:i]))))
+			#disp("x")		
+		endif
+	endfor
+	
+endfunction
+

@@ -1,0 +1,10 @@
+Tak1:
+	Citesc linie cu linie in format string apoi covertesc la numere folosind str2num, exceptand prima linie unde citesc explicit cu scanf cele 2 numere
+	Pentru fiecare punct din cele cerute calculez valoarea plecand de la valorile pe care le iau punctele initial. Folosesc formulele de al interpolarea neville facand atatea iteratii cate puncte am, in final obtinand valoarea in punctul dorit de mine.
+
+Task2:
+	Citesc ca la Taskul 1.
+	Pentru fiecare punct din cele m pe fiecare interval aproximez practic functia pe portiuni cu derivata in punctele cunoscute.
+
+Task3:
+	Mentionez ca la acest task am gasit pseudocod pe net cu formulele care afla valoriile indicilor a, b, c, d ale functiilor si le.am adaptat la programul meu. pentru ca nu am putut sa deduc matricea sistemului din formulele din laborator. Am explicat mai mult in cod cu comentarii.

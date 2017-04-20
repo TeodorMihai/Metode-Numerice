@@ -1,0 +1,5 @@
+function [x s y] = invat_func(a,b)
+	s = a + b;
+	x = a - b;
+	y = a + b;
+endfunction

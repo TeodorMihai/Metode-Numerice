@@ -1,0 +1,4 @@
+
+	[fid3, mesaj3] = fopen("output1A", 'w');
+	x = 5;
+	contor = fprintf(fid3, "%d", x);

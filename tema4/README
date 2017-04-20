@@ -1,0 +1,21 @@
+Task1:
+
+Trapez: Am vectorii X si Y care descriu figura. Stiind ca ele sunt date in sensul trigonometric le parcurg la rand si decid cand sa adun sau sa scad aria aproximativa. Decid in functie de ordinea in care sunt x-ii, cand cresc scad, cand descresca adun(ne gandim la punctul de plecare)
+
+Simpson:  La fel ca la simpson adun sau scad regiuni, doar ca acum folosim integram pe lungimea a 3 puncte (de coordonate x) asa ca trebuie sa parcurgem punctele din 2 in 2. De asemenea daca x-ii nu sunt sortati (ori 3 puncte la rand crescatoare , ori descrescatoare),
+nu are sens sa integram fasia (nu se poate aplica formula lui simpson?). Ca si la trapeze adapatam "h"-ul fiind de fapt grosimea 
+fasiei pe care vrem sa o integram inlocuim un h-ul cu X(i) - X(i- 2). In rest aplicam formula clasica Simpson de integrare.
+
+
+Task2: 
+
+Ca sa aflam centroidul unei suprafate nu putem face doar media punctelor care alcatuiesc suprafata, trebuie sa asociem fiecarui punct o pondere. Asa ajungem la formula (integrala din x * f(x)). Coordonata x a centroidului fiind: integrala din x * f (x) / integrala din f(x). Formula este similara pentru coordonata y a centroidului. Practic facem un fel de medie ponderata in loc de o meide simpla. f(x)-ul din formula fiind ponderea asociata (suma ponderilor adica integrala din f(x) fiind chiar numitorul ca in formula de medie ponderata). Trebuind sa trecem in discret, integram pe fasii (de grosime xi - x(i- 1)) si pentru fiecare fasie aproximam x si y cu (x(i) + x(i + 1) / 2), respectiv (y(i) + y(i + 1)) / 2 si inmultim asta cu ponderea f(x) respectiv f(y) care este integrat(aproximat) prin metoda trapezelor ca in taskul 1. 
+
+
+Task3:
+
+Volumul: Suma volumelor tuturor fasiilor. Fiecare fasie are volum = arie * inaltime , inaltimea fiind diferenta dintre inaltimea fasiei actuale si celei anterioare, iar aria o aprximam ca media ariilor fasiilor adiacente.
+
+Masa: masa = volum * densitate. Pentru fiecare fasie am volumul si densitatea. Le inmultesc pe fiecare in parte apoi adun si obtin masa.
+
+Centrul de masa: Pentru fiecare fasie in parte gasim centrul de masa. Avand in vedere ca fiecare fasie(sectiune) a avionuului are densitatea constanta, centrul de masa e echivalent cu centrul de greutate, si noi tocmai am definit o metoda care calculeaza centrul de greutate. O folosim pentru fiecare sectiune a avionului, astfel avem centrul de masa corespunzator fiecarei sectiuni. Acum consideram sistemul echivalent cu al unuia de particule punctiforme. Centrul de masa repezinta pozitia particulei, iar masa sectiunii massa particulei. Centrul masa al avionului se obtine facand o medie ponderata pentru acestor particule, mai exact coordonata x va fii (suma din coordonata x a fiecarei particule * masa particulei ) / (suma meselor particulelor). Analog pentru y si z. Centrele de masa pentru x si y le avem calculate cu ajutorul metodei anterioare. Pentru coorodnata z centrele de masa vor fi mediile aritmetice inaltimilor vecine, pentru ca sectiunile sunt simetrice fata de planul XoY. In program intiial calculez numaratorul, apoi impart la numarator.

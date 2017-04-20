@@ -1,0 +1,31 @@
+Cerinta 1:  Calculez iterativ valorile pentru fiecare polinom, primele 2 polinaome le initailizez cu valorile de baza
+		 	pentru polinom caracteristic unei matrici 0 * 0, si elemntul insusi continut de o matrice 1 * 1
+
+Cerinta 2:  Ideea dup care calculez alternanta  + -. Inmultesc doua valori consecutive, daca rezultatul este negativ
+			insemna ca semnele alterneaza deci creste cu o unitate numarul valorilor proprii. Daca intalnim un 0
+			crestem automat pentru ca sa specifica ca semnul atribuit unui 0 este cel opus valorii precedente, si 
+			in loc de 0 scriem valoarea opusa valorii precedente. Asa stim sigur ca avem semnul opus valorii precedente.
+
+Cerinta 3: 	Pentru fiecare linie calculam valoarea t ca suma tuturor elementelor in modul in afara de elementul diagonal, 
+			dupa care aplicam teorema Gerhgorin si acutalizam limita superioara si cea inferioara.
+
+Cerinta 4:	Am implementat intocmai algoritmul descirs in enuntul temei, singura mentinue este aceea ca daca m > n trebuie
+			actualizat m cu n, din moment ce nu putem avem mai multe valori proprii decat dimensiunea matricei
+			(pentru ca un polinom de grad n are maxim n radacini)
+
+Cerinta 5:  Cu ajutorul functiei ValoriPolinoame pot afla valoarea polinomului  caracteristic pentru orice valoarea
+			(ultima valoare din vectorul P returnat de functia ValoriPolinoame este fix valoarea in x a polinomului caracteristic)
+			In functie de aceasta valoarea pentru x = mid (la mijlocul intervalului in care caut) ma orientez in ce interval 
+			sa caut, cel inferior sau cel superior. Caut pana cand valoarea din mijlocul intervalului este foarte apropiata de zero.
+Cerinta 6:
+
+			Am 3 functii:
+			Thomas: rezolva un sistem cu o matrice tridiagonala. Algoritmul lui Thomas este o particularizare a algoritmului lui Gauss.
+			Se alege un pivot si se face se scad liniile intre ele astfel incat sa se obtina 0 pe urmatoarea linie de  sub pivot 
+			(restul valorilor de sub pivot sunt oricum 0). 
+			inmultire: Practic inmulteste matricea formata vectorul d pe diagonala si s pe diagonala inferioara/superioara. 
+			Cateva formule simple, pe cazul general la inmultirea unei linii cu o coloana vom avea doar 3 elemente care nu vor 0 pe linia respectiva.
+			PutereInv: Aproximez succesiv valoriile vectoriilor prorii(y_new, y_old). DE asemenea schimb si deplasarea cu una mai apropiata
+			de cea vectorului propriu h = valp. Folosesc functia Thomas pentru a rezolva sistemul.
+			Ma opresc fie la numarul maxim de iteratii fie cand A* vect_propriu - val_proprie * vector propriu = 0.Aceasta formula reiese din teoria spatiilor vectoriale: un vector propriu pentru o transformare liniara este acel vector care inmultit cu matricea A (ii aplici transfoarmea liniara) da un vector care are aceeasi orientare(doar ca difera ca valorea cu valoarea proprie asocia)
+	

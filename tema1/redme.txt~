@@ -1,0 +1,34 @@
+Task 1
+
+A 
+Am o singura functie(matrixCipher) + convert_int(primeste un caracter intoarce valoarea atribuita lui (a -> 1, space -> 0 b -. 2 etc))
++ convert_char(primeste un intreg, returneaza caracterul corespunzator, pentru a -> 1, b -> 2 , sapce -> 0 etc)
+In mare convertesc literele la cifre, bag zerouri pana e lungimea e divizibila cu n
+iau blocuri de cate n numere, le inmultesc cu matricea data, convertesc inapoi la caractere si afisez.
+
+B
+Convertesc caracterele la fel ca la subpunctul A. Mai folosesc o functie inversa_gauss in care fac inversa cu Gauss in aritmetica modulara.
+Algritmul e cel clasic, iau un pivot il fac 1, si fac zerouri deasupra si sub el. Eu am gasit un exemplu pe net
+in care explica cum sa calculezi inversa cu Gauss, dar imi e frica ca va fi foarte asemanator cu al colegilor, in fond algoritmul e destul de simplu.
+Mai o fucntie inversu_fermat in care aflu inversul unui nr x, mod p folosind mica teorema a lui Fermat
+In rest e asemanator cu subpunctul A
+
+C
+Convertesc ca la A din caractere in numere. Matricea mea de translatie este una care daca ai fi intr-un spatiu de n dimensiuni
+ar translata un punct cu k unititati(practic adauga k unitati la fiecare coordonata). Legatura cu problema noastra este ca blocurile sunt formate din n numere(cate coordonate are un punct) si adaugam k la fiecare dintre ele.
+Cand se face trecerea de la k la k + 1 trebuie modificata un pic matricea de translatie.
+De asemenea matricea de translatie are dimensiunea (n + 1) x (n + 1). Ca sa se poate inmulti cu blocul codificat adaug 1 la finalul acestuia. Dupa inmultire nu afisez ultimul element.
+
+
+Task 2
+
+Am 4 functii:
+
+inversa     - primeste ca argument o matrice, returneaza inversa ei prin metoda partitionarii
+strassen    - primeste ca argument 2 matrici, returneaza rez inmultirii dintre ele, cu algoritmul lui strassen
+putere_mat  - primeste ca argument o matrice A si un nr natural n, returneaza matricea A ^ n in O(log2(m^ log2(7) * n)),
+			  unde m e dimensiunea matriceai, log2(7) vine din strassen
+taskc 		- nu are argumente, returneaza (A ^ n) ^ (-1), are o problema cu citirea, citeste matricea transupsa!!!
+			- daca nu merge sterge linia A = A', e semnalat si in fisier
+
+Am scris mai multe detalii in comentariile fiecarei functii.

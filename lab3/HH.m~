@@ -1,0 +1,14 @@
+function [Q R] = HH(A)
+
+	[m n] = size(A);
+	I = eye(n);
+	H1 = I;
+	for p = 1: min(m - 1, n)
+		u = getHSReflector2(A(:,p), p);
+		H1 = I - 2 * u *u' / (u' * u);
+		A = H1 * A;
+		H = H1 * H;
+	endfor
+	Q = H';	
+	R = A;
+endfunction
